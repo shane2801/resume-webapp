@@ -14,16 +14,16 @@
 
     
   {% if title %}
-    <title>Django Blog - {{ title  }}</title>
+    <title>éphémère - {{ title  }}</title>
   {% else %}
-    <title> Django Blog</title>
+    <title> éphémère</title>
   {% endif %}
 </head>
 <body>
   <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">
-          <a class="navbar-brand mr-4 ourblogname" href="{% url 'blog-home' %}">Django Blog</a>
+          <a class="navbar-brand mr-4 ourblogname" href="{% url 'blog-home' %}">Ephémère</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
