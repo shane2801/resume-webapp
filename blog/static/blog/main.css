@@ -132,3 +132,7 @@ ul{
   font-size: 22px;
   font-family: 'Acne';
 }
+/* Solid border */
+hr.solid {
+  border-top: 50px solid #dddddd ;
+}

@@ -1,0 +1,85 @@
+
+{% extends "blog/base.html" %}
+{% block content %}
+  {% for resume in resumes %}
+  <div class="row">
+      <div class="col-md-3">
+        <div class="card card-body h-100  border-info couleurarriere" id="profile-wrapper">
+          <img id="profile-pic" src="{{ resume.user.profile.image.url }}" >
+          <hr>
+          <h4>Hi I'm {{resume.user.username}}!</h4>
+
+        </div>
+      </div>
+
+      <div class="col-md-9">
+        <div class="card card-body h-100  border-info couleurarriere">
+          <h4>About Me</h4>
+          <hr>
+          <p> {{resume.personal_profile}}</p>
+          
+            <small class="contact_details"> {{ resume.user.email}} </small>
+            <small class="contact_details"> {{resume.user.profile.address}}</small>
+            <small class="contact_details"> {{resume.user.profile.phone_number}}</small>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card card-body h-100 couleurarriere">
+          <h5>My Experience</h5>
+          <hr>
+          {{ resume.user.profile.experience}}
+          </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card card-body h-100 couleurarriere ">
+          <h5>My Skills</h5>
+          <hr>
+          {{resume.user.profile.skills}}
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card card-body h-100 couleurarriere">
+          <h5>My Education</h5>
+          <hr>
+          {{ resume.user.profile.education}}
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card card-body h-100 couleurarriere">
+          <h5>Other Relevant Experience and Project Work</h5>
+        <hr>
+        {{ resume.user.profile.other_relevant_experience}}
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card card-body h-100 couleurarriere">
+          <h5>Languages</h5>
+          <hr>
+          {{ resume.user.profile.languages}}
+        </div>
+      </div>
+      <br>
+    <div class="col-md-6">
+        <div class="card card-body h-100 couleurarriere">
+          <h5>Referrences</h5>
+          <hr>
+          {{ resume.user.profile.referrences}}
+        </div>
+      </div>
+    </div>
+    <br>
+    <hr class="solid">
+  {%endfor%}
+{% endblock content%}
