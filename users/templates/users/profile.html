@@ -1,0 +1,106 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <div class="row">
+      <div class="col-md-3">
+        <div class="card card-body h-100  border-info couleurarriere" id="profile-wrapper">
+          <img id="profile-pic" src="{{ user.profile.image.url }}" >
+          <hr>
+          <h4>Hi I'm {{user.username}}!</h4>
+
+        </div>
+      </div>
+
+      <div class="col-md-9">
+        <div class="card card-body h-100  border-info couleurarriere">
+          <h4>About Me</h4>
+          <hr>
+          <p> {{user.profile.personal_profile}}</p>
+          
+            <small class="contact_details"> {{ user.email}} </small>
+            <small class="contact_details"> {{user.profile.address}}</small>
+            <small class="contact_details"> {{user.profile.phone_number}}</small>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card card-body h-100 couleurarriere">
+          <h5>My Experience</h5>
+          <hr>
+          {{ user.profile.skills}}
+          </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card card-body h-100 couleurarriere ">
+          <h5>My Skills</h5>
+          <hr>
+          {{user.profile.skills}}
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card card-body h-100 couleurarriere">
+          <h5>My Education</h5>
+          <hr>
+          {{ user.profile.education}}
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card card-body h-100 couleurarriere">
+          <h5>Other Relevant Experience and Project Work</h5>
+        <hr>
+        {{ user.profile.other_relevant_experience}}
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card card-body h-100 couleurarriere">
+          <h5>Languages</h5>
+          <hr>
+          {{ user.profile.languages}}
+        </div>
+      </div>
+      <br>
+    <div class="col-md-6">
+        <div class="card card-body h-100 couleurarriere">
+          <h5>Referrences</h5>
+          <hr>
+          {{ user.profile.referrences}}
+        </div>
+      </div>
+    </div>
+    <br>
+      <!-- FORM HERE -->
+      <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Resume</legend>
+                {{ u_form|crispy }}
+                {{ p_form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Update</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
+
+<!--
+   <div class="content-section">
+      <div class="media">
+        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+        <div class="media-body">
+          <h2 class="account-heading">{{ user.username }}</h2>
+          <p class="text-secondary">{{ user.email }}</p>
+        </div>
+      </div>
+-->
