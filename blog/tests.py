@@ -43,6 +43,7 @@ class MyTests(TestCase):
 		self.assertEquals(response.status_code,200)
 		self.assertTemplateUsed(response,'users/register.html')
 
+	#testing the login process as you need to before accessing the profile
 	def setUp(self):
 		self.client = Client()
 		self.user = User.objects.create_user('john', 'lennon@thebeatles.com', 'johnpassword')

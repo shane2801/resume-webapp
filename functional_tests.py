@@ -19,7 +19,7 @@ class NewVisitorTest(unittest.TestCase):
 
 	def test_home_page_is_displayed(self):
 		self.browser.get('http://localhost:8000')	
-		#Edith visits the site and views the home page for the first time
+		#Edith visits the site and views the home page for the first time(based on my localhost)
 		alert = self.browser.find_element_by_class_name('media-body')
 		self.assertEquals(alert.find_element_by_tag_name('h2').text, 'Breaking Bad')
 
@@ -36,7 +36,7 @@ class NewVisitorTest(unittest.TestCase):
 	#she then decides to login to have a try
 	def test_login_page_is_displayed(self):
 		self.browser.get('http://localhost:8000/login/')
-		self.assertIn('Log In!',self.browser.page_source)
+		self.assertIn('Log In',self.browser.page_source)
 
 	#She has a look at her watch and logs out as she realises she is going to be late for work
 	def test_logout_page_is_displayed(self):
