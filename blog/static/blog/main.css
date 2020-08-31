@@ -22,7 +22,7 @@ ul {
 }
 /*django blog header background*/
 .bg-steel {
-  background-color: #29a3a3;
+  background-color: #29a3a3;opacity: 1 ;
 }
 /*home login register etc on nav bar*/
 .site-header .navbar-nav .nav-link {
@@ -127,7 +127,7 @@ ul{
 }
 
 .couleurarriere{
-  background: #29a3a3; opacity:0.6;
+  background: #29a3a3; opacity:0.8;
   
 }
 

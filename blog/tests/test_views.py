@@ -1,30 +1,10 @@
 from django.test import TestCase, Client
 from django.urls import reverse, resolve
-from .views import home, resume
 from users.views import register, profile
 from django.contrib.auth.models import User
-import json
 
-class MyTests(TestCase):
+class TestViews(TestCase):
 
-#testing urls of our website
-	def test_home_url_is_resolved(self):
-		url = reverse('blog-home')
-		self.assertEquals(resolve(url).func,home)
-
-	def test_resume_url_is_resolved(self):
-		url = reverse('resume')
-		self.assertEquals(resolve(url).func,resume)
-	
-	def test_register_url_is_resolved(self):
-		url = reverse('register')
-		self.assertEquals(resolve(url).func,register)
-
-	def test_profile_url_is_resolved(self):
-		url = reverse('profile')
-		self.assertEquals(resolve(url).func,profile)
-
-#testing views of our website
 	def test_home_GET(self):
 		client = Client()
 		response = client.get(reverse('blog-home'))
@@ -43,7 +23,7 @@ class MyTests(TestCase):
 		self.assertEquals(response.status_code,200)
 		self.assertTemplateUsed(response,'users/register.html')
 
-	#testing the login process as you need to before accessing the profile
+	#testing the login process as you need you are redirected to a login page before you are allowed to access the profile
 	def setUp(self):
 		self.client = Client()
 		self.user = User.objects.create_user('john', 'lennon@thebeatles.com', 'johnpassword')
