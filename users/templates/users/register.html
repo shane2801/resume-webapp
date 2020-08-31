@@ -1,10 +1,10 @@
 {% extends "blog/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <div class="content-section">
+    <div class="content-section opa">
         <form method="POST">
             {% csrf_token %}
-            <fieldset class="form-group">
+            <fieldset class="form-group blacktext">
                 <legend class="border-bottom mb-4">Become part of the family today!</legend>
                 {{ form|crispy }}
             </fieldset>

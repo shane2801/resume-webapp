@@ -7,14 +7,14 @@
         <div class="card card-body h-100  border-info couleurarriere" id="profile-wrapper">
           <img id="profile-pic" src="{{ resume.user.profile.image.url }}" >
           <hr>
-          <h4>Hi I'm {{resume.user.username}}!</h4>
+          <h4 class="blacktext">Hi I'm {{resume.user.username}}!</h4>
 
         </div>
       </div>
 
       <div class="col-md-9">
         <div class="card card-body h-100  border-info couleurarriere">
-          <h4>About Me</h4>
+          <h4 class="blacktext">About Me</h4>
           <hr>
           <p> {{resume.personal_profile}}</p>
           
@@ -28,7 +28,7 @@
     <div class="row">
       <div class="col-md-6">
         <div class="card card-body h-100 couleurarriere">
-          <h5>My Experience</h5>
+          <h5 class="blacktext">My Experience</h5>
           <hr>
           {{ resume.user.profile.experience}}
           </div>
@@ -36,7 +36,7 @@
 
       <div class="col-md-6">
         <div class="card card-body h-100 couleurarriere ">
-          <h5>My Skills</h5>
+          <h5 class="blacktext">My Skills</h5>
           <hr>
           {{resume.user.profile.skills}}
         </div>
@@ -46,7 +46,7 @@
     <div class="row">
       <div class="col-md-6">
         <div class="card card-body h-100 couleurarriere">
-          <h5>My Education</h5>
+          <h5 class="blacktext">My Education</h5>
           <hr>
           {{ resume.user.profile.education}}
         </div>
@@ -54,7 +54,7 @@
 
       <div class="col-md-6">
         <div class="card card-body h-100 couleurarriere">
-          <h5>Other Relevant Experience and Project Work</h5>
+          <h5 class="blacktext">Other Relevant Experience and Project Work</h5>
         <hr>
         {{ resume.user.profile.other_relevant_experience}}
         </div>
@@ -65,7 +65,7 @@
     <div class="row">
       <div class="col-md-6">
         <div class="card card-body h-100 couleurarriere">
-          <h5>Languages</h5>
+          <h5 class="blacktext">Languages</h5>
           <hr>
           {{ resume.user.profile.languages}}
         </div>
@@ -73,7 +73,7 @@
       <br>
     <div class="col-md-6">
         <div class="card card-body h-100 couleurarriere">
-          <h5>Referrences</h5>
+          <h5 class="blacktext">Referrences</h5>
           <hr>
           {{ resume.user.profile.referrences}}
         </div>

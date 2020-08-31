@@ -7,6 +7,7 @@ def home(request):
        'posts':  Post.objects.all()
     }
     return render(request, 'blog/home.html',context)
+
 def resume(request):
 	context1 = {
        'resumes':  Profile.objects.all()

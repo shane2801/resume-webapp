@@ -4,7 +4,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  color: #0a2929;
+  color: white;
   margin-top: 5rem;
 }
 
@@ -127,16 +127,35 @@ ul{
 }
 
 .couleurarriere{
-  background: #29a3a3;
+  background: #29a3a3; opacity:0.8;
   
 }
 
 .montitre{
   color:#5cd6d6;
   font-size: 22px;
-  font-family: 'Acne';
+  font-family: 'Acme';
 }
 /* Solid border */
 hr.solid {
   border-top: 50px solid #dddddd ;
+}
+
+.logout{
+  color:white;
+}
+
+.logouttext {
+  color:white;
+  font-size: 30px;
+  font-family: 'Acme';
+}
+
+.blacktext {
+  color:black;
+}
+
+.opa
+{
+  opacity: 0.8;
 }
